@@ -3,8 +3,6 @@ import axios from 'axios'
 
 export default function TableAdmin({producto, url, setControl, setModifcar, setValues}) {
 
-    
-
     const handleDelete = (id) => {
         axios.delete(url+id)
         setControl(true)
