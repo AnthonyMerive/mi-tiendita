@@ -1,5 +1,5 @@
 import React from 'react'
-import Login from '../components/Login'
+import Home from '../components/Home'
 
 import {
     BrowserRouter as Router,
@@ -13,7 +13,7 @@ export default function AppRouter() {
         
         <Router>
             <Switch>
-                <Route exact path="/mi-tiendita" component={Login}/>                
+                <Route exact path="/mi-tiendita" component={Home}/>                
             </Switch>
         </Router>
     )
