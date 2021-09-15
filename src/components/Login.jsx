@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 export default function Login() {
     return (
@@ -21,9 +27,11 @@ export default function Login() {
                     </div>
                     <div className="row">
                         <div className="col s12 center-align">
-                            <button class="btn waves-effect waves-light btn-large amber darken-1" type="submit" name="action">Ingresar
-                                <i class="material-icons right">send</i>
-                            </button>
+                            <Link to="/mi-tiendita/admin">
+                                <button class="btn waves-effect waves-light btn-large amber darken-1" type="submit" name="action">Ingresar
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </form>

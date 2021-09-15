@@ -7,8 +7,6 @@ import AppRouter from './Routers/AppRouter';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavBar/>
-    <Cards/>
     <AppRouter/>
   </React.StrictMode>,
   document.getElementById('root')
