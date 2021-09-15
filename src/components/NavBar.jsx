@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import M from 'materialize-css/dist/js/materialize.min.js'
-import { Link, NavLink, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
 
@@ -17,7 +17,7 @@ export default function NavBar() {
             <div className="navbar">
                 <nav className="amber darken-2 ">
                     <div className="nav-wrapper">
-                        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                        <span data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></span>
                         <Link to="/mi-tiendita" className="brand-logo">Mi tiendita</Link>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li>
