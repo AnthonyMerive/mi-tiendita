@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Admin from './components/Admin'
 import NavBar from './components/NavBar'
+import AppRouter from './Routers/AppRouter';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <NavBar/>
-    <Admin/>
+    <AppRouter/>
   </React.StrictMode>,
   document.getElementById('root')
 );
