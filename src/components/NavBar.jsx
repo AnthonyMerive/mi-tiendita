@@ -16,23 +16,23 @@ export default function NavBar() {
             <div className="navbar">
                 <nav className="amber darken-2 ">
                     <div className="nav-wrapper">
-                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                         <a href="#" className="brand-logo">Mi tiendita</a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
-                            <li><a href="" ><span class="material-icons">location_on</span><span>Mexico city</span></a></li>
+                            <li><a href="" ><span className="material-icons">location_on</span><span>Mexico city</span></a></li>
                             <li>
                                 <a href="" className="btn amber darken-1">
-                                    <i class="material-icons">shopping_cart</i>
+                                    <i className="material-icons">shopping_cart</i>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <ul class="sidenav" id="mobile-demo">
-                    <li><a href="" ><span class="material-icons">location_on</span><span>Mexico city</span></a></li>
+                <ul className="sidenav" id="mobile-demo">
+                    <li><a href="" ><span className="material-icons">location_on</span><span>Mexico city</span></a></li>
                     <li>
                         <a href="" className="btn amber darken-1">
-                            <i class="material-icons">shopping_cart</i>
+                            <i className="material-icons">shopping_cart</i>
                         </a>
                     </li>
                 </ul>

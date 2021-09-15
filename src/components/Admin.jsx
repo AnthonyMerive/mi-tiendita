@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import TableAdmin from './TableAdmin'
 import uuid from 'react-uuid'
+import { fileUpload } from '../Helpers/fileUpload'
 
 export default function Admin() {
 
@@ -73,6 +74,7 @@ export default function Admin() {
             "precio": "",
             "imagen": ""
         })
+
     }
 
     const handleVolver = () => {
@@ -84,6 +86,26 @@ export default function Admin() {
             "precio": "",
             "imagen": ""
         })
+    }
+
+    const handleClickInput = () => {
+        document.querySelector('#inputFileChanger').click()
+    }
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0]
+
+
+
+        fileUpload(file)
+            .then(response => {
+                console.log(response)
+                setValues({ ...values, imagen: response })
+            }).catch(error => {
+                console.log(error)
+            })
+
+
     }
 
     return (<>
@@ -162,7 +184,7 @@ export default function Admin() {
 
             <div className="col s6">
                 <div className="row">
-                    <div className="input-field col s12">
+                    <div className="input-field col s12" onClick={handleClickInput}>
                         <i className="material-icons prefix">add_a_photo</i>
                         <input
                             name="imagen"
@@ -170,13 +192,50 @@ export default function Admin() {
                             type="text"
                             id="autocomplete-input"
                             className="autocomplete"
-                            placeholder={
-                                modifcar ?
-                                    modifcar.imagen
-                                    : ''
-                            }
-                            onChange={handleChange} />
+                            placeholder={''} />
+
+                        <input
+                            type="file"
+                            id="inputFileChanger"
+                            required=""
+                            filename={''}
+                            onChange={handleFileChange}
+                            style={{ display: 'none' }}
+                        />
                         <label htmlFor="autocomplete-input">Imagen</label>
+
+
+                        {/* <div class="file-field input-field">
+                            <div class="btn btn-small" onClick={handleClickInput}>
+                                <span>Imagen</span>
+
+                                <input
+                                    name="imagen"
+                                    value={imagen}
+                                    type="text"
+                                    id="autocomplete-input-change"
+                                    className="autocomplete"
+                                    placeholder={
+                                        modifcar ?
+                                            modifcar.imagen
+                                            : ''
+                                    } />
+
+                                <input
+                                    type="file"
+                                    id="inputFileChanger"
+                                    required=""
+                                    filename={''}
+                                    onChange={handleFileChange}
+                                    style={{ display: 'none' }}
+                                />
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" />
+                            </div>
+                        </div> */}
+
+
                     </div>
                 </div>
             </div>
