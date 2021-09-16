@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Admin from './components/Admin'
 
+
 ReactDOM.render(
   <React.StrictMode>
-    <Admin />
+    <Admin/>
   </React.StrictMode>,
   document.getElementById('root')
 );
